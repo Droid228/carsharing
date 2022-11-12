@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../inc/header.ejs') %>
+  <body>
+    <div class="container d-flex justify-content-center">
+      <form
+        action="/login/"
+        method="post"
+        class="mainform d-flex justify-content-center flex-column"
+      >
+        <div class="header d-flex justify-content-center">Войти в систему</div>
+        <input type="text" name="login" placeholder="Логин" required /><input
+          type="password"
+          name="password"
+          placeholder="Пароль"
+          required
+        />
+        <input type="submit" value="Войти" class="btn btn-light" />
+        <a
+          class="d-flex justify-content-center reg"
+          href="/register"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Зарегистрировать нового пользователя</a
+        >
+      </form>
+    </div>
+  </body>
+</html>

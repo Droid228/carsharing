@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../inc/header.ejs') %>
+  <body>
+    <div class="container d-flex justify-content-center">
+      <form
+        action="/return/<%=data.id_car%>/<%=data.id_user%>"
+        method="post"
+        class="mainform d-flex justify-content-center flex-column"
+      >
+        <div class="header d-flex justify-content-center">
+          Вернуть автомобиль
+        </div>
+        <select name="rating" required>
+          <option value="" selected disabled>Выберите оценку</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+        <input type="submit" value="Вернуть автомобиль" class="btn btn-light" />
+      </form>
+    </div>
+  </body>
+</html>

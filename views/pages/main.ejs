@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../inc/header.ejs') %>
+  <body>
+    <div class="maincontainer container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <%- include('../inc/sidepanel.ejs') %>
+        </div>
+        <div class="col-lg-9 col-md-6"><div class="cars-cards"></div></div>
+      </div>
+    </div>
+
+    <%- include('../inc/react.ejs') %>
+    <script type="text/babel" src="../components/Cars.js"></script>
+    <script type="text/babel">
+      ReactDOM.render(
+        <Cars id_user="<%= id_user%>" host="<%= host %>" port="<%= port %>"/>,
+        document.querySelector(".cars-cards")
+      );
+    </script>
+  </body>
+</html>
